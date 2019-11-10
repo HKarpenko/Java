@@ -9,9 +9,13 @@ public class GameInterface {
     public GameInterface(){
         usersName="";
     }
+    public void timeInfo(String type, double time){
+        System.out.println("Time of "+type+" is "+time+" sec");
+    }
     public void newRoundInfo(GameEngine ge){
         System.out.println(usersName+" ROUND "+ge.getRound());
-        System.out.println("Input "+ge.getDifficulty()+"-long permutation");
+        System.out.println("Input "+ge.getDifficulty()+"-long permutation in one line, like '123'");
+        System.out.println("Input 'exit' to finish game");
     }
     public void attemptsLeftInfo(GameEngine ge){
         System.out.println(usersName+", "+ge.getAttempts()+" attempts left");
